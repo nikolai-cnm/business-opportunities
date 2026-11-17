@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="da"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Business opportunities</title>
+<meta name="description" content="Hvilken forretning er værd at bygge? Rammer og eksempler samlet fra kilder, der vurderer forretningstyper på sværhed, indtjening og varig værdi.">
+<meta name="color-scheme" content="light dark">
+<style>
+:root{
+  --bg:#f9f8f5; --panel:#fff; --panel2:#f3f1ec; --ink:#16181b; --muted:#66625b;
+  --line:#e2ded6; --line2:#ece9e3; --accent:#1f5c4a; --accent-soft:#e6f0ec;
+  --good:#2f6b3c; --bad:#9a3324; --mid:#8a6a1d;
+  --c1:#9a3324; --c2:#8a6a1d; --c3:#5a5f8a; --c4:#1d5c8a; --c5:#2f6b3c;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 10px 30px rgba(0,0,0,.045);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme=light]){
+    --bg:#121416; --panel:#191b1e; --panel2:#1f2225; --ink:#eae8e4; --muted:#a19d96;
+    --line:#2b2f33; --line2:#24272a; --accent:#7cc7ad; --accent-soft:#18282299;
+    --good:#84c58e; --bad:#e7907d; --mid:#d9b46b;
+    --c1:#e7907d; --c2:#d9b46b; --c3:#a6abe0; --c4:#79b6e6; --c5:#84c58e;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 10px 30px rgba(0,0,0,.32);
+  }
+}
+:root[data-theme=dark]{
+  --bg:#121416; --panel:#191b1e; --panel2:#1f2225; --ink:#eae8e4; --muted:#a19d96;
+  --line:#2b2f33; --line2:#24272a; --accent:#7cc7ad; --accent-soft:#18282299;
+  --good:#84c58e; --bad:#e7907d; --mid:#d9b46b;
+  --c1:#e7907d; --c2:#d9b46b; --c3:#a6abe0; --c4:#79b6e6; --c5:#84c58e;
+  --shadow:0 1px 2px rgba(0,0,0,.45),0 10px 30px rgba(0,0,0,.32);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:17px/1.66 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent)}
+.layout{display:grid;grid-template-columns:290px minmax(0,1fr);max-width:1320px;margin:0 auto}
+
+/* sidebar */
+#side{
+  position:sticky;top:0;height:100vh;overflow-y:auto;padding:26px 20px 60px;
+  border-right:1px solid var(--line);background:var(--panel)
+}
+#side .brand{font-size:20px;font-weight:700;line-height:1.25;margin:0 0 3px;letter-spacing:-.01em}
+#side .sub{font-size:13px;color:var(--muted);margin:0 0 14px}
+#theme{
+  font:inherit;font-size:12.5px;padding:5px 11px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line);background:var(--bg);color:var(--muted)
+}
+#theme:hover{color:var(--accent);border-color:var(--accent)}
+.navdel{
+  font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);margin:24px 0 7px
+}
+#side ul{list-style:none;margin:0;padding:0}
+#side li a{
+  display:flex;gap:9px;padding:6px 9px;border-radius:8px;text-decoration:none;
+  color:var(--ink);font-size:14px;line-height:1.4
+}
+#side li a b{color:var(--muted);min-width:20px;font-variant-numeric:tabular-nums;font-weight:600}
+#side li a:hover{background:var(--accent-soft)}
+#side li a:hover b{color:var(--accent)}
+#side li.sub a{padding-left:38px;font-size:13px;color:var(--muted)}
+
+/* indhold */
+main{padding:44px 46px 140px;min-width:0}
+header.top h1{font-size:40px;line-height:1.12;letter-spacing:-.025em;margin:0 0 14px}
+header.top .lead{font-size:19px;color:var(--muted);max-width:720px;margin:0 0 22px}
+.oversigt{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:26px 0 0}
+.oversigt a{
+  display:block;text-decoration:none;color:var(--ink);background:var(--panel);
+  border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)
+}
+.oversigt a:hover{border-color:var(--accent)}
+.oversigt .nr{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.oversigt .t{display:block;font-weight:700;font-size:17px;line-height:1.3;margin:4px 0}
+.oversigt .k{display:block;font-size:13.5px;color:var(--muted);line-height:1.45}
+
+section.kilde{
+  margin:64px 0 0;padding-top:28px;border-top:2px solid var(--line);scroll-margin-top:12px
+}
+.kilde-head .nr{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.kilde-head h2{font-size:32px;line-height:1.16;letter-spacing:-.02em;margin:6px 0 8px}
+.kilde-head .meta{font-size:13.5px;color:var(--muted);margin:0 0 18px}
+.kilde-head .meta a{color:var(--muted)}
+.kern{
+  background:var(--panel2);border:1px solid var(--line2);border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;padding:15px 20px;margin:0 0 8px;font-size:16.5px
+}
+.kern p{margin:0 0 10px}.kern p:last-child{margin:0}
+h3.sek{font-size:23px;letter-spacing:-.015em;margin:44px 0 10px;scroll-margin-top:12px}
+
+.kort{
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:24px 28px 22px;margin:18px 0;box-shadow:var(--shadow);scroll-margin-top:12px
+}
+.kort-head{display:flex;gap:14px;align-items:flex-start;margin:0 0 10px}
+.badge{
+  flex:none;font-size:13px;font-weight:700;color:#fff;border-radius:8px;padding:4px 10px;
+  line-height:1.45;font-variant-numeric:tabular-nums;margin-top:4px;background:var(--accent)
+}
+:root[data-theme=dark] .badge{color:#111}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .badge{color:#111}}
+.kort-head h4{font-size:22px;line-height:1.26;letter-spacing:-.015em;margin:0}
+.kort-head .en{font-size:13px;color:var(--muted);margin:2px 0 0}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:3px 10px;background:var(--panel2);color:var(--muted)}
+.kort p{margin:10px 0}
+.kort ul{margin:8px 0;padding-left:20px}
+.kort li{margin:3px 0}
+.to{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0 4px}
+.to > div{border:1px solid var(--line2);border-radius:12px;padding:12px 16px;background:var(--panel2)}
+.to h5{margin:0 0 4px;font-size:12px;letter-spacing:.09em;text-transform:uppercase}
+.to .plus h5{color:var(--good)} .to .minus h5{color:var(--bad)}
+.to ul{margin:0;padding-left:18px;font-size:15px}
+.indsigt{
+  margin:14px 0 4px;padding:11px 16px;border-radius:10px;background:var(--accent-soft);font-size:15.5px
+}
+.indsigt b{color:var(--accent)}
+blockquote{margin:12px 0;padding:2px 0 2px 16px;border-left:3px solid var(--line);color:var(--muted);font-style:italic}
+
+table{border-collapse:collapse;width:100%;font-size:15px;margin:12px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line2);vertical-align:top}
+th{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tw{overflow-x:auto}
+
+/* idiot-indeks-diagram */
+.diagram{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 18px 10px;margin:18px 0;box-shadow:var(--shadow)}
+.diagram svg{width:100%;height:auto;display:block}
+.diagram .cap{font-size:13px;color:var(--muted);margin:6px 4px 4px}
+
+/* tjek */
+.tjek{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 26px;margin:18px 0;box-shadow:var(--shadow)}
+.slider{display:grid;grid-template-columns:150px minmax(0,1fr) 36px;gap:12px;align-items:center;margin:10px 0}
+.slider label{font-weight:600;font-size:15px}
+.slider label small{display:block;font-weight:400;color:var(--muted);font-size:12.5px}
+.slider input{width:100%;accent-color:var(--accent)}
+.slider output{font-variant-numeric:tabular-nums;font-weight:700;text-align:right}
+#tjek-svar{margin:16px 0 0;padding:13px 16px;border-radius:10px;background:var(--accent-soft);font-size:15.5px}
+
+footer{margin:80px 0 0;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+
+@media (max-width:900px){
+  .layout{display:block}
+  #side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:20px 16px}
+  #side nav{display:none}
+  main{padding:28px 16px 100px}
+  header.top h1{font-size:32px}
+  .kilde-head h2{font-size:26px}
+  .kort{padding:20px 18px}
+  .to{grid-template-columns:1fr}
+  .slider{grid-template-columns:1fr 36px}
+  .slider label{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="side">
+  <div class="brand">Business opportunities</div>
+  <p class="sub">Hvilke forretninger er værd at bygge</p>
+  <button id="theme" type="button">Skift lys/mørk</button>
+  <nav id="nav"></nav>
+</aside>
+
+<main>
+<header class="top" id="top">
+  <h1>Business opportunities</h1>
+  <p class="lead">Hvilken båd du sidder i, betyder mere end hvor hårdt du ror. Her er rammerne for at vælge og vurdere en forretning, samlet fra én kilde ad gangen. Nye kilder kommer til løbende.</p>
+  <div class="oversigt" id="oversigt"></div>
+</header>
+
+<!-- ============================================================
+     KILDE 1
+     Ny kilde: kopiér en <section class="kilde"> og giv den
+     id, data-nr, data-titel og data-kort. Menu og oversigt bygges selv.
+     ============================================================ -->
+<section class="kilde" id="idiot-indekset" data-nr="1" data-titel="Idiot-indekset" data-kort="Fem typer forretning, placeret efter hvor svære de er at drive, og hvor mange penge de realistisk kan tjene.">
+  <div class="kilde-head">
+    <div class="nr">Kilde 1 · Alex Hormozi</div>
+    <h2>Idiot-indekset: fem typer forretning</h2>
+    <p class="meta">Video: <a href="https://www.youtube.com/@AlexHormozi" target="_blank" rel="noopener">How To Make More Money Than You Deserve (My 2027 Framework)</a> · ca. 18 min · tilføjet 17. nov. 2026</p>
+  </div>
+
+  <div class="kern">
+    <p>Hormozi har set over 10.000 virksomheder gå gennem hovedkvarteret i Las Vegas og sorteret de almindelige typer i fem kategorier: hvor svære er de at drive, og hvor mange penge kan de realistisk tjene. Han kalder det idiot-indekset, fordi nogle forretninger lader folk, der hverken er særligt kloge eller særligt flittige, tjene mere, end de fortjener.</p>
+    <p><b>Udgangspunktet er Warren Buffett.</b> En studiekammerat fra handelshøjskolen var klogere og arbejdede hårdere end Buffett. Han gik ind i stålbranchen, Buffett gik ind i investering, og kammeraten tjente langt mindre. Forklaringen var båden, ikke manden.</p>
+  </div>
+
+  <div class="diagram">
+    <svg viewBox="0 0 640 430" role="img" aria-label="Idiot-indekset: sværhedsgrad på x-aksen, pengepotentiale på y-aksen, med fem kategorier placeret">
+      <line x1="70" y1="370" x2="610" y2="370" stroke="var(--line)" stroke-width="2"/>
+      <line x1="70" y1="370" x2="70" y2="30" stroke="var(--line)" stroke-width="2"/>
+      <line x1="340" y1="40" x2="340" y2="370" stroke="var(--line2)" stroke-dasharray="4 5"/>
+      <line x1="70" y1="200" x2="610" y2="200" stroke="var(--line2)" stroke-dasharray="4 5"/>
+      <text x="340" y="405" text-anchor="middle" font-size="13" fill="var(--muted)">Sværhedsgrad →</text>
+      <text x="80" y="392" font-size="12" fill="var(--muted)">Let</text>
+      <text x="600" y="392" text-anchor="end" font-size="12" fill="var(--muted)">Svær</text>
+      <text transform="translate(28 200) rotate(-90)" text-anchor="middle" font-size="13" fill="var(--muted)">Pengepotentiale →</text>
+      <g font-size="14" font-weight="700">
+        <a href="#kat-5"><circle cx="170" cy="85" r="26" fill="var(--c5)"/><text x="170" y="90" text-anchor="middle" fill="var(--panel)">5</text>
+          <text x="205" y="80" fill="var(--ink)">Let og mange penge</text><text x="205" y="98" font-weight="400" font-size="12.5" fill="var(--muted)">Udbud og efterspørgsel</text></a>
+        <a href="#kat-4"><circle cx="520" cy="85" r="26" fill="var(--c4)"/><text x="520" y="90" text-anchor="middle" fill="var(--panel)">4</text>
+          <text x="485" y="130" text-anchor="end" fill="var(--ink)">Svær og mange penge</text><text x="485" y="148" text-anchor="end" font-weight="400" font-size="12.5" fill="var(--muted)">Voldgravsbyggede</text></a>
+        <a href="#kat-3"><circle cx="340" cy="200" r="26" fill="var(--c3)"/><text x="340" y="205" text-anchor="middle" fill="var(--panel)">3</text>
+          <text x="375" y="196" fill="var(--ink)">Middel og middel</text><text x="375" y="214" font-weight="400" font-size="12.5" fill="var(--muted)">Ekspertafhængige</text></a>
+        <a href="#kat-2"><circle cx="170" cy="310" r="26" fill="var(--c2)"/><text x="170" y="315" text-anchor="middle" fill="var(--panel)">2</text>
+          <text x="205" y="305" fill="var(--ink)">Let og få penge</text><text x="205" y="323" font-weight="400" font-size="12.5" fill="var(--muted)">Startforretninger</text></a>
+        <a href="#kat-1"><circle cx="520" cy="310" r="26" fill="var(--c1)"/><text x="520" y="315" text-anchor="middle" fill="var(--panel)">1</text>
+          <text x="485" y="305" text-anchor="end" fill="var(--ink)">Svær og få penge</text><text x="485" y="323" text-anchor="end" font-weight="400" font-size="12.5" fill="var(--muted)">Arbejdstunge commodities</text></a>
+      </g>
+    </svg>
+    <p class="cap">Klik på en kategori for at hoppe til den. Rækkefølgen følger videoen: fra den værste (1) til det forjættede land (5).</p>
+  </div>
+
+  <article class="kort" id="kat-1">
+    <div class="kort-head"><span class="badge" style="background:var(--c1)">1</span>
+      <div><h4>Arbejdstunge commodities</h4><p class="en">Labor-heavy commodities · svær og få penge</p>
+      <div class="tags"><span class="tag">Undgå</span></div></div></div>
+    <p>Lav adgangsbarriere, så alle kan gå ind. Resultatet er hård konkurrence, begrænset skalering og dermed begrænset opside, plus meget operationelt træk: det kræver mange mennesker at lede for at få små forbedringer.</p>
+    <p><b>Eksempler:</b> den klassiske mellemklasse-restaurant, servicebaserede fitnesscentre, bureauer til små og mellemstore virksomheder, fysisk detailhandel, eventplanlægning.</p>
+    <p>Hormozi drev Gym Launch for ejere af servicebaserede fitnesscentre. De mest succesfulde spurgte, hvordan de skulle skalere videre. Hans ærlige svar: tag de færdigheder, du har lært ved at lede ti centre, og brug dem i en anden forretning. Så tjener du markant mere.</p>
+    <div class="indsigt"><b>Testen:</b> Hvordan ser forretningen ud, når den er maxet ud? Hvor mange ejere af servicebaserede fitnesscentre er milliardærer? Ingen. Franchisegivere og folk med 100 Planet Fitness-centre findes, men det er andre forretninger.</div>
+  </article>
+
+  <article class="kort" id="kat-2">
+    <div class="kort-head"><span class="badge" style="background:var(--c2)">2</span>
+      <div><h4>Lette startforretninger</h4><p class="en">Easy and low money · let og få penge</p>
+      <div class="tags"><span class="tag">Godt første skridt</span></div></div></div>
+    <p>Mere skalering og mindre kompleksitet. Én person med de rigtige færdigheder kan typisk nå en indkomst blandt den øverste 1 % i USA, men forretningerne bliver sjældent meget større end det.</p>
+    <p><b>Eksempler:</b> dropshipping (1-2 mio. dollar om året er muligt), lette hjemmeservices som højtryksrens, bejdsning af terrasser og græsslåning, automater og pengeautomater, wholesaling af ejendomme, Airbnb-arbitrage og affiliate-indhold, hvor du laver indhold og sender trafik til andres produkter.</p>
+    <div class="indsigt"><b>Ikke automatisk dårligt:</b> Er målet cashflow, nye færdigheder og startkapital, kan det være den rigtige båd. Er målet en milliardvirksomhed, gælder andre krav. Testen er den samme: findes der milliardærer fra Airbnb-arbitrage eller højtryksrens? Ikke rigtig.</div>
+  </article>
+
+  <article class="kort" id="kat-3">
+    <div class="kort-head"><span class="badge" style="background:var(--c3)">3</span>
+      <div><h4>Ekspertafhængige forretninger</h4><p class="en">Expert-dependent · middel sværhed og middel penge</p>
+      <div class="tags"><span class="tag">Indkomst, ikke formue i firmaet</span></div></div></div>
+    <p>Du kan blive velhavende af indkomsten, men forretningen er meget svær at sælge. Den skaber indtjening, ikke virksomhedsværdi. Til gengæld kan ekspertydelser sælges med meget høje marginer, og med et lille team kan du drive det som dig i en Iron Man-dragt: medier og coaching giver gearing.</p>
+    <p><b>Eksempler:</b> onlinecoaching, AI-implementering, byggeri (der findes enkelte store eksempler, men det er meget svært), afvænning og rehab, kirurger, enterprise-bureauer, business opportunities og influencere eller personlige brands, der sælger sponsorater på en podcast.</p>
+    <p>Joe Rogan fik sin aftale med Spotify på omkring 100 mio. dollar, men Hormozi peger på overlevelsesbias: hvor mange podcasts findes der, og hvor mange Joe Rogans? Det er som musik. Der er penge i det, men det er svært.</p>
+    <div class="indsigt"><b>Det ikke-oplagte:</b> Afhænger forretningen tungt af grundlæggeren, er den måske et godt job, et forbedret job, men ikke nødvendigvis et godt firma eller et aktiv, der kan overdrages.</div>
+  </article>
+
+  <article class="kort" id="kat-4">
+    <div class="kort-head"><span class="badge" style="background:var(--c4)">4</span>
+      <div><h4>Voldgravsbyggede virksomheder</h4><p class="en">Moat-built enterprises · svær og mange penge</p>
+      <div class="tags"><span class="tag">Milliarder, men svært</span></div></div></div>
+    <p>Forretninger med voldgrave og barrierer, som begrænser konkurrencen. Barrieren kan være dyb faglighed, en struktur som en markedsplads, lang tid (fordi rentes rente tager tid), myndighedsgodkendelse eller mange penge. Ofte en kombination.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Forretning</th><th>Hvad der holder andre ude</th></tr></thead>
+      <tbody>
+        <tr><td>Ægte AI (ikke bare wrappers)</td><td>Faglighed og penge</td></tr>
+        <tr><td>Medicinalvirksomhed</td><td>Myndighedsgodkendelse, penge, tid og faglighed</td></tr>
+        <tr><td>Specialfremstilling: luftfart, chips (NVIDIA)</td><td>Faglighed, penge, godkendelse og nogle gange tid</td></tr>
+        <tr><td>Cannabis</td><td>Myndighedsgodkendelse og startkapital (strammet op siden boomet)</td></tr>
+        <tr><td>Franchising</td><td>Faglighed, regulering, stærk enhedsøkonomi i den enkelte enhed og en model, der ikke afhænger af talent. Det sidste er sjældent</td></tr>
+        <tr><td>Roll-ups (fra én blikkenslager til 20 i ét firma)</td><td>Meget faglighed og typisk mange penge. Let at sige, svært at gøre</td></tr>
+        <tr><td>Markedspladser (fx Skool)</td><td>Nærmest umuligt: masser af kapital og dyb faglighed. Lykkes det, får du netværkseffekt og milliarder i værdi</td></tr>
+        <tr><td>SaaS</td><td>Dyb faglighed, men AI gør det lettere og øger konkurrencen. Voldgraven er ved at eroderes</td></tr>
+        <tr><td>Dagligvaremærker (energidrik, gummier, shampoo)</td><td>Brand, forsyningskæde og penge</td></tr>
+        <tr><td>Finans: daytrading og hedgefonde</td><td>Mange penge og meget høj faglighed</td></tr>
+        <tr><td>Banker (rigtige, statsgaranterede)</td><td>Regulering og store mængder kapital</td></tr>
+        <tr><td>Energi, datacentre, telekom</td><td>Regulering, kapital og faglighed</td></tr>
+        <tr><td>Kasinoer</td><td>En licens til at trykke penge, bogstaveligt talt fra staten</td></tr>
+      </tbody>
+    </table></div>
+    <p>Om daytrading-kurser: de bør kunne svare på det oplagte spørgsmål. Hvis du er så god til daytrading, hvorfor daytrader du så ikke bare?</p>
+    <div class="indsigt"><b>Det ikke-oplagte:</b> Sværhed kan være en konkurrencefordel. Kan alle gøre det, gør alle det. Hormozi ville som ung have hurtige penge, fordi han var flad. I dag vil han have så mange forhindringer som muligt, fordi alle andre også skal over dem. Han konkurrerer hellere med 20 eller 50 end med tusindvis, og det giver bedre odds, selvom kravene er højere: rejse kapital, ansætte et stærkt team og forstå regulering.</div>
+  </article>
+
+  <article class="kort" id="kat-5">
+    <div class="kort-head"><span class="badge" style="background:var(--c5)">5</span>
+      <div><h4>Let og mange penge: det forjættede land</h4><p class="en">Demand/supply arbitrage · let og mange penge</p>
+      <div class="tags"><span class="tag">Tidsvinduer</span><span class="tag">Medvind</span></div></div></div>
+    <p>Forretninger med medvind i efterspørgslen eller begrænset udbud. De opstår typisk af udbud og efterspørgsel eller af nye regler, der flytter balancen. Det er tidsvinduer, hvor der hurtigt kan tjenes mange penge.</p>
+    <ul>
+      <li><b>Medspa og alt til ældre.</b> Pengene ligger hos ældre mennesker, der har tid og ikke vil blive gamle. Tager du en almindelig forretning og flytter den over til ældre, kan du ifølge Hormozi typisk 2-3-doble den.</li>
+      <li><b>Formueforvaltning.</b> Dem, han møder, keder sig og tjener mange penge. Kunderne skifter sjældent, de bliver rigere, og du tager et gebyr på pengene. Uden en eneste ny kunde er forretningen typisk fordoblet eller tredoblet på ti år.</li>
+      <li><b>Nye regler.</b> Cannabis har været hele cyklussen igennem. GLP-1 er på toppen nu. Botox for omkring 20 år siden: lovligt fra den ene dag til den anden, Botox-fester og tandlæger, der gav Botox, fordi efterspørgslen langt oversteg udbuddet.</li>
+      <li><b>Ældrepleje og plejehjem.</b> Langt flere ældre end der er pladser.</li>
+      <li><b>Inkasso.</b> Kan du sælge og kender markedet, er der mange penge.</li>
+      <li><b>Forretninger med lidt snavs på.</b> Det, der ikke lyder godt til et cocktailparty, fx affaldshåndtering. Hormozi giver forretninger, der lyder cool, et nedslag: alle vil have dem, så alle gør det.</li>
+      <li><b>Ejendomssyndikering.</b> Fonden vinder næsten altid på grund af strukturen. Du lægger ca. 5 % selv: 1 mio. dollar, og rejser 19 mio. Med en fond på 20 mio. kan du typisk geare den tre gange og købe for 60 mio. Du får 20 % af økonomien. Kravene er tre ting: finde handler, arbejde med handler og rejse penge.</li>
+      <li><b>Erhvervsrengøring.</b> Meget klistret, mange mulige kunder, handles til gode multipler og har en vis beskyttelse mod AI. Det eneste svære er at skaffe kunder.</li>
+      <li><b>Elevatorservice.</b> "Nærmest en racket." Kun en håndfuld producenter, og det er ikke kompliceret at finde teknikere.</li>
+    </ul>
+    <div class="indsigt"><b>Det ikke-oplagte:</b> Alle forretninger har svære dele. Spørgsmålet er, hvor meget der er svært sammenlignet med hvor mange andre der prøver at komme over det. Disse forretninger kombinerer stor efterspørgsel med begrænset konkurrence.</div>
+  </article>
+
+  <h3 class="sek" id="idiot-valg">Vælg båd efter målet</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Hvis du vil have</th><th>Så skal du vælge</th></tr></thead>
+    <tbody>
+      <tr><td>Høj indkomst</td><td>En forretning, der giver høj indtjening til dig, fx ekspertafhængig (3)</td></tr>
+      <tr><td>Cashflow</td><td>En startforretning (2) eller et vindue med medvind (5)</td></tr>
+      <tr><td>Virksomhedsværdi</td><td>Noget mere skalerbart, mere overdrageligt og forsvarligt</td></tr>
+      <tr><td>Milliarder</td><td>Et kæmpe marked og en ægte voldgrav (4)</td></tr>
+    </tbody>
+  </table></div>
+  <blockquote>Det tager den samme tid at arbejde 60 timer om ugen på at starte en restaurant som 60 timer om ugen på at starte et softwarefirma, men kun den ene kan blive en milliardvirksomhed. Vælg båden, og ro så hårdt, at det ville være urimeligt, hvis du ikke fik succes.</blockquote>
+</section>
+
+<!-- ============================================================
+     KILDE 2
+     ============================================================ -->
+<section class="kilde" id="den-perfekte-forretning" data-nr="2" data-titel="Den perfekte forretning" data-kort="Fem fordele, der gør en forretning lettere at vokse og mere profitabel: klistret, dyr, voksende, let og unik.">
+  <div class="kilde-head">
+    <div class="nr">Kilde 2 · Alex Hormozi</div>
+    <h2>Den perfekte forretning: fem fordele</h2>
+    <p class="meta">Video: <a href="https://www.youtube.com/@AlexHormozi" target="_blank" rel="noopener">What Makes The Perfect Business (5 Things)</a> · ca. 21 min · tilføjet 17. nov. 2026</p>
+  </div>
+
+  <div class="kern">
+    <p>De fem ting, Hormozi ville kigge efter, hvis han skulle starte forfra. Han bruger dem i den portefølje, der omsatte for over 250 mio. dollar sidste år. Meget få forretninger har alle fem, men bare én af dem gør en forretning bedre end andre.</p>
+    <p>Alle fem er glidende skalaer, ikke ja/nej. Spørgsmålet er ikke, om noget er klistret, men hvor klistret det er. Og videoen er ikke en opfordring til at springe fra sin nuværende forretning, men til at se, hvilke håndtag man kan trække i.</p>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>#</th><th>Fordel</th><th>Engelsk</th><th>Kort sagt</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><a href="#f-klistret">Klistret</a></td><td>Sticky</td><td>Kunderne bliver og køber igen</td></tr>
+      <tr><td>2</td><td><a href="#f-dyr">Dyr</a></td><td>Expensive</td><td>Høj bruttomargin: koster en øre, sælges for en krone</td></tr>
+      <tr><td>3</td><td><a href="#f-voksende">Voksende</a></td><td>Expansion</td><td>Branchen vokser, så du vokser uden ekstra indsats</td></tr>
+      <tr><td>4</td><td><a href="#f-let">Let</a></td><td>Air</td><td>Få bevægelige dele og lave investeringer for at skalere</td></tr>
+      <tr><td>5</td><td><a href="#f-unik">Unik</a></td><td>Unique</td><td>En voldgrav, som andre ikke kan bygge</td></tr>
+    </tbody>
+  </table></div>
+
+  <article class="kort" id="f-klistret">
+    <div class="kort-head"><span class="badge">1</span>
+      <div><h4>Klistret: kunderne bliver</h4><p class="en">Sticky · revenue retention</p>
+      <div class="tags"><span class="tag">Den vigtigste</span></div></div></div>
+    <p>Har du ikke omsætningsfastholdelse, har du ingenting. Så er du altid i salgsbranchen. John Paul DeJoria, manden bag Paul Mitchell og Patrón: "Du vil være i genkøbsbranchen, ikke i salgsbranchen."</p>
+    <ul>
+      <li><b>Kundefastholdelse</b> (logo retention): havde du 100 kunder i januar, hvor mange har du nu? Den kan aldrig blive over 100 %. Noget frafald er strukturelt og ufrivilligt (kunden flytter, dør, lukker eller fyrer den medarbejder, der brugte ydelsen). Det frivillige frafald, hvor de går, fordi de synes, du er dårlig, er det, du skal undgå.</li>
+      <li><b>Omsætningsfastholdelse</b> (net revenue retention): tjente du 100 dollar på kunderne i januar, hvad tjener du på samme gruppe i dag? Den kan godt være over 100 %, hvis dem, der bliver, bruger mere.</li>
+    </ul>
+    <p>Den letteste vej er en tydelig vej for billige kunder til at bruge mere. Et medlemskab til 9 dollar og et til 99 dollar: går en kunde op, er det 11 gange så meget værd. Forlader 20 % af 9-dollar-kunderne dig, men får du 10 % til at tage springet, er du over 100 %, og forretningen vokser, selvom du ikke gør noget. For en ydelse betyder det også, at kunden skal have brug for den fra start. Derfor er kvalificering vigtig.</p>
+
+    <h5 style="margin:18px 0 4px;font-size:15px">Skools data fra hundredtusindvis af medlemskaber</h5>
+    <div class="tw"><table>
+      <thead><tr><th>Tidspunkt</th><th>Frafald</th><th>Hvad du gør</th></tr></thead>
+      <tbody>
+        <tr><td>Måned 1</td><td class="num">over 20 %</td><td>Gør de første 30 dage fantastiske</td></tr>
+        <tr><td>Måned 3</td><td class="num">ca. 10 %</td><td>Hav en tydelig vej forbi tredje måned</td></tr>
+        <tr><td>Måned 6</td><td class="num">sidste store fald</td><td>Nå hertil, så falder frafaldet til ca. 2 % om måneden</td></tr>
+      </tbody>
+    </table></div>
+    <p>Det gælder på tværs af kategorier. Du skal ikke tænke "hvordan holder jeg dem for evigt", men "hvordan får jeg dem til måned seks".</p>
+
+    <h5 style="margin:18px 0 4px;font-size:15px">Firma A mod firma B</h5>
+    <div class="tw"><table>
+      <thead><tr><th></th><th>År 1</th><th>År 2</th><th>År 3</th><th>Skaffet i alt</th></tr></thead>
+      <tbody>
+        <tr><td>A: mister alle kunder hvert år</td><td class="num">100 nye</td><td class="num">200 nye</td><td class="num">300 nye</td><td class="num">600</td></tr>
+        <tr><td>B: mister ingen</td><td class="num">100 aktive</td><td class="num">200 aktive</td><td class="num">300 aktive</td><td class="num">300</td></tr>
+      </tbody>
+    </table></div>
+    <p>Samme omsætning hvert år. Men A skal skaffe dobbelt så mange kunder, og de ekstra kunder koster ofte 2-3 gange mere stykket, så det svarer nærmere til 900 kunder. B sover bedre om natten og kan regne sin formue ud i et regneark.</p>
+
+    <div class="to">
+      <div class="minus"><h5>Ikke klistret</h5><ul><li>Uddannelse i sig selv (man tager ikke samme matematikfag igen)</li><li>Tagdækning</li><li>Bilsalg</li></ul></div>
+      <div class="plus"><h5>Klistret</h5><ul><li>Livsforsikring</li><li>Alarmsystemer</li><li>Internet og telefoni</li><li>Bank</li><li>Fællesskab og forbrugsvarer, der bruges måned efter måned</li></ul></div>
+    </div>
+    <div class="indsigt"><b>Hvis du kun må vælge én af de fem,</b> så er det denne. Den tager tid at bygge, men den låser rentes rente op. Hormozis råd til sit yngre jeg: man hopper fra ting til ting, fordi det nuværende føles som fra måned til måned.</div>
+  </article>
+
+  <article class="kort" id="f-dyr">
+    <div class="kort-head"><span class="badge">2</span>
+      <div><h4>Dyr: høj bruttomargin</h4><p class="en">Expensive · gross margin</p></div></div>
+    <p>I en perfekt verden koster varen en øre og sælges for en krone. Høj bruttomargin betyder, at du kan betale folk bedre, pengene kommer hurtigere ind, du kan geninvestere i vækst, og nettomarginen (EBITDA) er typisk også højere.</p>
+    <div class="indsigt"><b>Regnestykket:</b> En forretning på 100 mio. dollar med 10 % margin tjener det samme som en på 20 mio. med 50 % margin. Den sidste giver fem gange så meget pr. ekstra omsat dollar. Mindre arbejde for flere penge.</div>
+    <div class="to">
+      <div class="minus"><h5>Lav margin</h5><ul><li>Supermarkeder</li><li>Landbrug</li><li>Restauranter</li><li>Generelt commodities (mad er en af de mest priselastiske varer)</li></ul></div>
+      <div class="plus"><h5>Høj margin</h5><ul><li>Medier (en podcast-annonce koster det samme at læse op for 1.000 som for 1 mio. lyttere)</li><li>Information og uddannelse</li><li>Adgang til fællesskaber</li><li>Data og software</li><li>Medicin (en øre for en pille, solgt for en krone)</li><li>Kosttilskud, cremer og lignende</li></ul></div>
+    </div>
+    <p>Første kapitel i Hormozis bog <i>$100M Offers</i> handler om at gøre sig selv til andet end en commodity, så marginen kan hæves. Hans bog om Money Models handler om at kombinere tilbud, så pengene kommer hurtigere ind.</p>
+  </article>
+
+  <article class="kort" id="f-voksende">
+    <div class="kort-head"><span class="badge">3</span>
+      <div><h4>Voksende: et marked med medvind</h4><p class="en">Expansion · industry growth</p></div></div>
+    <p>Det handler om, at branchen vokser, ikke om din egen vækst. Den kommer fra marketing og distribution, og det kan man lære. Ved du, hvordan man skaber efterspørgsel, behøver du ikke medvind, men du skal ikke stå i modvind. Selv hvis du kan sælge, er et skrumpende marked en kamp op ad bakke.</p>
+    <div class="to">
+      <div class="minus"><h5>Skrumper</h5><ul><li>Aviser</li><li>Formel uddannelse (-6 % om året)</li><li>Tobak</li><li>Alkohol</li><li>Fysisk detailhandel</li><li>Administration, kontorarbejde, dataindtastning</li></ul></div>
+      <div class="plus"><h5>Vokser</h5><ul><li>Energi</li><li>AI</li><li>Sundhed</li><li>Cybersikkerhed</li><li>E-handel</li><li>Alternativ uddannelse (over 20 % om året, hans satsning med Skool)</li></ul></div>
+    </div>
+  </article>
+
+  <article class="kort" id="f-let">
+    <div class="kort-head"><span class="badge">4</span>
+      <div><h4>Let: få bevægelige dele og lave investeringer</h4><p class="en">Air · low operational complexity and low capex</p></div></div>
+    <p><b>Lav operationel kompleksitet</b> betyder få variable, du aktivt skal styre for at producere mere. En podcast-annonce: nogen betaler, du læser op, du trykker udgiv. Det skalerer hele vejen op. Med 100 restauranter har du tusindvis af ansatte, leverandører, varer, der bliver dårlige, indretning, lejemål, parkering og tilladelser, bare for at producere en smule mere.</p>
+    <p><b>Lav capex</b> betyder, at du ikke skal bruge mange penge for at blive ved med at vokse. Så skal du ikke udvande ejerskabet for at få kapital udefra. Warren Buffett vil have forretninger, der skaber masser af kontanter uden konstant at skulle geninvestere dem for at holde trit.</p>
+    <div class="indsigt"><b>Undtagelsen:</b> Det kan give mening at rejse kapital for at vinde markedsandele, hvis det giver en reel fordel ud over stordriftsfordele, som en netværkseffekt. Det er sjældent. Skool er et eksempel: en ekstra bruger koster næsten intet, men det er værd at få alle med, så pengene bliver i forretningen i stedet for at blive udbetalt.</div>
+    <p>Høj forrentning af investeret kapital (ROIC) gør dig til en magnet for penge. Kan du ikke rejse penge, er det sjældent salget, der er problemet, men at kerneøkonomien ikke er god nok. Eksempel: "Det koster 100.000 dollar at åbne, og du har pengene hjem på tre år" er et middelmådigt tilbud. "Det koster 100.000, og du tjener i gennemsnit 300.000 det første år" er et helt andet.</p>
+  </article>
+
+  <article class="kort" id="f-unik">
+    <div class="kort-head"><span class="badge">5</span>
+      <div><h4>Unik: en voldgrav</h4><p class="en">Unique · competitive moat</p></div></div>
+    <p>Noget, ingen andre kan bygge. Jo færre der har råd til at gå ind på markedet, jo større er voldgraven. Uden adgangsbarrierer får du masser af konkurrence.</p>
+    <div class="indsigt"><b>Eksemplet er marketingbureauer til sociale medier.</b> De kan være klistrede, have høj margin, ligge i et voksende marked (alle vil have flere kunder) og kræve lav capex, selvom driften er tungere. Med AI kan det blive rigtig interessant. Problemet er, at næsten alle kan starte et. Det gør det svært at skille sig ud, og det presser prisen.</div>
+    <p><b>Kapital som voldgrav.</b> Konkurrerer du med alle, der har hænder at grave med, er du langt bedre med en skovl. Investeringer i teknologi og udstyr med god forrentning gør det sværere for andre at komme ind og giver dig prisstyrke. Derfor kan et kraftværk være meget profitabelt. Når Hormozi først har lidt succes, kan han godt lide forretninger, der kræver kapital at udvide, fordi der er færre at konkurrere med. Kapital er ikke uangribelig, men bedre end ingenting.</p>
+    <p><b>Den bedste voldgrav</b> er det, du kan, og andre ikke kan: NVIDIA (enorme beløb og meget specialiseret viden, i dag et af verdens syv mest værdifulde selskaber) og atomkraft. Uden kapital: opskrifter, processer, patenter og forretningshemmeligheder. Et patent kræver tre ting: nyt, ikke-oplagt og nyttigt.</p>
+    <p><b>Brand er hans favorit.</b> Revlon er et billigt massemærke, men stadig dyrere end CVS' eget mærke, selvom de kommer fra samme samlebånd og bare får forskelligt navn stemplet på. Brandet sælger til flere, til en højere pris, og gør kunderne mere klistrede.</p>
+  </article>
+
+  <h3 class="sek" id="coca-cola">Coca-Cola målt på alle fem</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Fordel</th><th>Vurdering</th></tr></thead>
+    <tbody>
+      <tr><td>Klistret</td><td>Ja. Begynder folk at drikke Coca-Cola, bliver de typisk ved i lang tid</td></tr>
+      <tr><td>Dyr</td><td>Ja. Væsken i en dåse koster få øre, men sælges for meget mere</td></tr>
+      <tr><td>Voksende</td><td>Lidt. Den er global, så væksten kommer mest fra, at der er flere mennesker</td></tr>
+      <tr><td>Let</td><td>Midt imellem. Lettere end at skalere et revisionsfirma globalt, sværere end software</td></tr>
+      <tr><td>Unik</td><td>Ja. Brand og opskrift, så et billigt cola-mærke ikke overtager markedet. Kræver kapital at gå ind på nye markeder, men giver god forrentning</td></tr>
+    </tbody>
+  </table></div>
+  <p>Derfor har Warren Buffett været investor i mange år.</p>
+
+  <h3 class="sek" id="tjek">Tjek din egen forretning</h3>
+  <div class="tjek">
+    <p style="margin:0 0 8px;color:var(--muted);font-size:15px">Giv din forretning eller idé 0-10 på hver af de fem. Rådet fra videoen er at starte med fastholdelse og bygge resten på bagefter.</p>
+    <div id="sliders"></div>
+    <div id="tjek-svar" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- Plads til næste kilde: kopiér en <section class="kilde"> herover og ret data-nr, data-titel og data-kort. -->
+
+<footer>
+  Business opportunities · samlet af CNM Marketing · opsummeringer og oversættelser af kilderne, ikke ordrette citater medmindre andet er angivet.
+</footer>
+</main>
+</div>
+
+<script>
+// Menu og oversigt bygges ud fra sektionerne, så en ny kilde kun kræver en ny <section class="kilde">.
+(function(){
+  const kilder=[...document.querySelectorAll('section.kilde')];
+  const nav=document.getElementById('nav'), over=document.getElementById('oversigt');
+  let html='<div class="navdel">Kilder ('+kilder.length+')</div><ul>';
+  kilder.forEach(k=>{
+    html+='<li><a href="#'+k.id+'"><b>'+k.dataset.nr+'</b>'+k.dataset.titel+'</a></li>';
+    k.querySelectorAll('article.kort, h3.sek').forEach(a=>{
+      const t=a.matches('h3')?a.textContent:a.querySelector('h4').textContent.split(':')[0];
+      html+='<li class="sub"><a href="#'+a.id+'">'+t+'</a></li>';
+    });
+    const c=document.createElement('a');c.href='#'+k.id;
+    c.innerHTML='<span class="nr">Kilde '+k.dataset.nr+'</span><span class="t">'+k.dataset.titel+'</span><span class="k">'+k.dataset.kort+'</span>';
+    over.appendChild(c);
+  });
+  nav.innerHTML=html+'</ul>';
+})();
+
+// Lys/mørk
+(function(){
+  const r=document.documentElement,b=document.getElementById('theme');
+  try{const s=localStorage.getItem('bo-theme');if(s)r.dataset.theme=s}catch(e){}
+  b.addEventListener('click',()=>{
+    const mørk=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+    r.dataset.theme=mørk?'light':'dark';
+    try{localStorage.setItem('bo-theme',r.dataset.theme)}catch(e){}
+  });
+})();
+
+// Tjek din egen forretning
+(function(){
+  const F=[
+    ['klistret','Klistret','Kunderne bliver'],
+    ['dyr','Dyr','Bruttomargin'],
+    ['voksende','Voksende','Branchen vokser'],
+    ['let','Let','Få dele, lav capex'],
+    ['unik','Unik','Voldgrav']
+  ];
+  const box=document.getElementById('sliders'),svar=document.getElementById('tjek-svar');
+  F.forEach(([id,navn,hjælp])=>{
+    box.insertAdjacentHTML('beforeend','<div class="slider"><label for="s-'+id+'">'+navn+'<small>'+hjælp+'</small></label><input type="range" id="s-'+id+'" min="0" max="10" value="5"><output id="o-'+id+'">5</output></div>');
+  });
+  function opdater(){
+    const v=F.map(([id])=>+document.getElementById('s-'+id).value);
+    F.forEach(([id],i)=>document.getElementById('o-'+id).textContent=v[i]);
+    const sum=v.reduce((a,b)=>a+b,0), stærke=v.filter(x=>x>=7).length;
+    const lavest=Math.min(...v), svag=F[v.indexOf(lavest)][1].toLowerCase();
+    let t='<b>'+sum+' af 50.</b> '+stærke+' af fem fordele er stærke (7+). ';
+    if(v[0]<5) t+='Fastholdelsen er lav. Ifølge Hormozi er det den, du skal arbejde på først: gør de første 30 dage stærke, kom forbi måned 3, og få kunderne til måned 6. Har branchen slet ingen fastholdelse, og er du tidligt i karrieren, kan et skifte være værd at overveje.';
+    else if(lavest<5) t+='Det svageste punkt er "'+svag+'". Det er det håndtag, der er mest at hente på.';
+    else t+='Ingen af de fem er svage. Meget få forretninger har alle fem.';
+    svar.innerHTML=t;
+  }
+  box.addEventListener('input',opdater);opdater();
+})();
+</script>
+</body>
+</html>
